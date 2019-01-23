@@ -12,6 +12,7 @@
 		6160248221F918B400EB02CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6160248021F918B400EB02CD /* Main.storyboard */; };
 		6160248421F918B500EB02CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6160248321F918B500EB02CD /* Assets.xcassets */; };
 		6160248721F918B500EB02CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6160248521F918B500EB02CD /* LaunchScreen.storyboard */; };
+		FC85CF6F85029B9F37E9D016 /* Pods_LibertypoolAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE568906F270D7D5C086613 /* Pods_LibertypoolAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		6160248321F918B500EB02CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6160248621F918B500EB02CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6160248821F918B500EB02CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		906509EFBAD71FFB2E0DAF8A /* Pods-LibertypoolAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibertypoolAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibertypoolAssignment/Pods-LibertypoolAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		9AE568906F270D7D5C086613 /* Pods_LibertypoolAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibertypoolAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB21BD3BDED05A8570C2966 /* Pods-LibertypoolAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibertypoolAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibertypoolAssignment/Pods-LibertypoolAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC85CF6F85029B9F37E9D016 /* Pods_LibertypoolAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6160247B21F918B400EB02CD /* LibertypoolAssignment */,
 				6160247A21F918B400EB02CD /* Products */,
+				F595199DB76A98C88194541F /* Pods */,
+				9E238561772D6B0DBF37AC02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = LibertypoolAssignment;
 			sourceTree = "<group>";
 		};
+		9E238561772D6B0DBF37AC02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AE568906F270D7D5C086613 /* Pods_LibertypoolAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F595199DB76A98C88194541F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB21BD3BDED05A8570C2966 /* Pods-LibertypoolAssignment.debug.xcconfig */,
+				906509EFBAD71FFB2E0DAF8A /* Pods-LibertypoolAssignment.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6160248B21F918B500EB02CD /* Build configuration list for PBXNativeTarget "LibertypoolAssignment" */;
 			buildPhases = (
+				26B537DF127A59D7E14B61EF /* [CP] Check Pods Manifest.lock */,
 				6160247521F918B400EB02CD /* Sources */,
 				6160247621F918B400EB02CD /* Frameworks */,
 				6160247721F918B400EB02CD /* Resources */,
+				69F30E07F89D902D48A47674 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26B537DF127A59D7E14B61EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibertypoolAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69F30E07F89D902D48A47674 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LibertypoolAssignment/Pods-LibertypoolAssignment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LibertypoolAssignment/Pods-LibertypoolAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6160247521F918B400EB02CD /* Sources */ = {
@@ -280,6 +363,7 @@
 		};
 		6160248C21F918B500EB02CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB21BD3BDED05A8570C2966 /* Pods-LibertypoolAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +382,7 @@
 		};
 		6160248D21F918B500EB02CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 906509EFBAD71FFB2E0DAF8A /* Pods-LibertypoolAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
