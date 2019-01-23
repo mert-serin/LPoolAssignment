@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="598" y="-241"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Transaction Tab Bar Controller-->
         <scene sceneID="ldv-Ak-aiD">
             <objects>
-                <tabBarController id="rkV-Iy-KLf" sceneMemberID="viewController">
+                <tabBarController id="rkV-Iy-KLf" customClass="TransactionTabBarController" customModule="LibertypoolAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ez2-H7-nSE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
