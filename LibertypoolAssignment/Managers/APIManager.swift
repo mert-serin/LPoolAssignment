@@ -34,7 +34,7 @@ class APIManager: NSObject {
         alamofireManager = Alamofire.SessionManager(configuration: configuration)
     }
     
-    func makeRequest(method:String, path: String, parameters: Parameters?, encoding:ParameterEncoding = JSONEncoding.default, headers:HTTPHeaders?, onCompletion:@escaping APIResponse){
+    func makeRequest(method:String, path: String, parameters: Parameters?, encoding:ParameterEncoding = URLEncoding.default, headers:HTTPHeaders?, onCompletion:@escaping APIResponse){
         // Internet connection check.
         if Reachability.isConnectedToNetwork() == false {
             let result = OperationResult()

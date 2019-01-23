@@ -16,6 +16,7 @@
 		6126500621F9232700F5B580 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500521F9232700F5B580 /* Enums.swift */; };
 		6126500821F9238B00F5B580 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500721F9238B00F5B580 /* Reachability.swift */; };
 		6126500A21F923A400F5B580 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500921F923A400F5B580 /* Extensions.swift */; };
+		6126500C21F9243E00F5B580 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500B21F9243E00F5B580 /* URLConstants.swift */; };
 		6160247D21F918B400EB02CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160247C21F918B400EB02CD /* AppDelegate.swift */; };
 		6160248221F918B400EB02CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6160248021F918B400EB02CD /* Main.storyboard */; };
 		6160248421F918B500EB02CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6160248321F918B500EB02CD /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		6126500521F9232700F5B580 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		6126500721F9238B00F5B580 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6126500921F923A400F5B580 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6126500B21F9243E00F5B580 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		6160247921F918B400EB02CD /* LibertypoolAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibertypoolAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6160247C21F918B400EB02CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6160248121F918B400EB02CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				6126500521F9232700F5B580 /* Enums.swift */,
 				6126500921F923A400F5B580 /* Extensions.swift */,
+				6126500B21F9243E00F5B580 /* URLConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				6126500A21F923A400F5B580 /* Extensions.swift in Sources */,
 				61264FF921F9211E00F5B580 /* BaseViewController.swift in Sources */,
 				61264FFE21F9222B00F5B580 /* SettingsViewController.swift in Sources */,
+				6126500C21F9243E00F5B580 /* URLConstants.swift in Sources */,
 				6126500621F9232700F5B580 /* Enums.swift in Sources */,
 				61264FFC21F9222100F5B580 /* TransactionViewController.swift in Sources */,
 			);
