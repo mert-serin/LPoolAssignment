@@ -11,12 +11,11 @@
 		61264FF921F9211E00F5B580 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61264FF821F9211E00F5B580 /* BaseViewController.swift */; };
 		61264FFC21F9222100F5B580 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61264FFB21F9222100F5B580 /* TransactionViewController.swift */; };
 		61264FFE21F9222B00F5B580 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61264FFD21F9222B00F5B580 /* SettingsViewController.swift */; };
-		6126500021F9229600F5B580 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61264FFF21F9229600F5B580 /* APIManager.swift */; };
-		6126500321F9230500F5B580 /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500221F9230500F5B580 /* OperationResult.swift */; };
 		6126500621F9232700F5B580 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500521F9232700F5B580 /* Enums.swift */; };
-		6126500821F9238B00F5B580 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500721F9238B00F5B580 /* Reachability.swift */; };
-		6126500A21F923A400F5B580 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500921F923A400F5B580 /* Extensions.swift */; };
-		6126500C21F9243E00F5B580 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126500B21F9243E00F5B580 /* URLConstants.swift */; };
+		6126501321FA664E00F5B580 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501221FA664E00F5B580 /* Constants.swift */; };
+		6126501521FA66A200F5B580 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501421FA66A200F5B580 /* APIRouter.swift */; };
+		6126501821FA67E100F5B580 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501721FA67E100F5B580 /* TransactionModel.swift */; };
+		6126501A21FA686600F5B580 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501921FA686600F5B580 /* APIClient.swift */; };
 		6160247D21F918B400EB02CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160247C21F918B400EB02CD /* AppDelegate.swift */; };
 		6160248221F918B400EB02CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6160248021F918B400EB02CD /* Main.storyboard */; };
 		6160248421F918B500EB02CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6160248321F918B500EB02CD /* Assets.xcassets */; };
@@ -29,12 +28,11 @@
 		61264FF821F9211E00F5B580 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		61264FFB21F9222100F5B580 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		61264FFD21F9222B00F5B580 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		61264FFF21F9229600F5B580 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		6126500221F9230500F5B580 /* OperationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
 		6126500521F9232700F5B580 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		6126500721F9238B00F5B580 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		6126500921F923A400F5B580 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		6126500B21F9243E00F5B580 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		6126501221FA664E00F5B580 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6126501421FA66A200F5B580 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		6126501721FA67E100F5B580 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		6126501921FA686600F5B580 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		6160247921F918B400EB02CD /* LibertypoolAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibertypoolAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6160247C21F918B400EB02CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6160248121F918B400EB02CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +76,7 @@
 		61264FEE21F9206700F5B580 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				61264FFF21F9229600F5B580 /* APIManager.swift */,
+				6126501921FA686600F5B580 /* APIClient.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -87,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				6126500521F9232700F5B580 /* Enums.swift */,
-				6126500921F923A400F5B580 /* Extensions.swift */,
-				6126500B21F9243E00F5B580 /* URLConstants.swift */,
+				6126501221FA664E00F5B580 /* Constants.swift */,
+				6126501421FA66A200F5B580 /* APIRouter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -96,6 +94,7 @@
 		61264FF021F9207100F5B580 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6126501621FA67D600F5B580 /* Response Models */,
 				6126500121F922F800F5B580 /* Manager Models */,
 			);
 			path = Models;
@@ -155,10 +154,16 @@
 		6126500121F922F800F5B580 /* Manager Models */ = {
 			isa = PBXGroup;
 			children = (
-				6126500221F9230500F5B580 /* OperationResult.swift */,
-				6126500721F9238B00F5B580 /* Reachability.swift */,
 			);
 			path = "Manager Models";
+			sourceTree = "<group>";
+		};
+		6126501621FA67D600F5B580 /* Response Models */ = {
+			isa = PBXGroup;
+			children = (
+				6126501721FA67E100F5B580 /* TransactionModel.swift */,
+			);
+			path = "Response Models";
 			sourceTree = "<group>";
 		};
 		6160247021F918B400EB02CD = {
@@ -343,17 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6126500021F9229600F5B580 /* APIManager.swift in Sources */,
 				61264FF421F920C600F5B580 /* TransactionTabBarController.swift in Sources */,
-				6126500321F9230500F5B580 /* OperationResult.swift in Sources */,
 				6160247D21F918B400EB02CD /* AppDelegate.swift in Sources */,
-				6126500821F9238B00F5B580 /* Reachability.swift in Sources */,
-				6126500A21F923A400F5B580 /* Extensions.swift in Sources */,
+				6126501821FA67E100F5B580 /* TransactionModel.swift in Sources */,
+				6126501A21FA686600F5B580 /* APIClient.swift in Sources */,
 				61264FF921F9211E00F5B580 /* BaseViewController.swift in Sources */,
 				61264FFE21F9222B00F5B580 /* SettingsViewController.swift in Sources */,
-				6126500C21F9243E00F5B580 /* URLConstants.swift in Sources */,
+				6126501521FA66A200F5B580 /* APIRouter.swift in Sources */,
 				6126500621F9232700F5B580 /* Enums.swift in Sources */,
 				61264FFC21F9222100F5B580 /* TransactionViewController.swift in Sources */,
+				6126501321FA664E00F5B580 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
