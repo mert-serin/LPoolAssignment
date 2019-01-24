@@ -5,8 +5,9 @@ target 'LibertypoolAssignment' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 pod 'Marshal'
-pod 'Alamofire'
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
 pod 'Charts'
 pod 'RxSwift',    '~> 4.0'
 pod 'RxCocoa',    '~> 4.0'
+pod 'SwiftKeychainWrapper'
 end
