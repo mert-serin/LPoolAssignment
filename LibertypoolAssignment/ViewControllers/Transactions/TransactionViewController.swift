@@ -37,7 +37,8 @@ class TransactionViewController: BaseViewController {
         transactionTableView.rowHeight = 140
         transactionTableView.separatorColor = .clear
         APIClient.getTransaction(address: "0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a").observeOn(MainScheduler.instance).subscribe(onNext: { (model) in
-            Observable.just(model.result)
+            self.changeModels(items: model.result).bind(to: self.transactionTableView.rx.items(dataSource: self.dataSource))
+                .disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
         
 
@@ -45,4 +46,27 @@ class TransactionViewController: BaseViewController {
 //        transactions.bind(to: .disposed(by: disposeBag)
     }
 
+    private func changeModels(items:[TransactionModel]) -> Observable<[CustomSectionModel]>{
+        
+        var sectionArray = [CustomSectionModel]()
+        var lastAddedItem:TransactionModel?
+        var lastAddedArray:[TransactionModel]! = []
+        for item in items{
+            if lastAddedItem == nil{
+                lastAddedArray.append(item)
+                lastAddedItem = item
+                continue
+            }
+            if lastAddedItem != nil && lastAddedItem!.date!.isInSameMonth(date: item.date!) && lastAddedItem!.date!.isInSameYear(date: item.date!){
+                lastAddedArray.append(item)
+            }else{
+                sectionArray.append(CustomSectionModel(items: lastAddedArray, header: lastAddedItem!.date!.formatToDate(dateFormat: "MMM yyyy")))
+                lastAddedArray = [item]
+            }
+            
+            lastAddedItem = item
+        }
+        
+        return Observable.just(sectionArray)
+    }
 }

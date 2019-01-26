@@ -70,7 +70,7 @@ enum APIRouter: URLRequestConvertible {
                 Constants.Parameters.apiKey : Constants.APIKey,
                 Constants.Parameters.endBlock : 99999999,
                 Constants.Parameters.startBlock : 0,
-                Constants.Parameters.sort : "asc"
+                Constants.Parameters.sort : "desc"
             ]
         }
     }
