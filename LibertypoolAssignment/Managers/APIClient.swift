@@ -12,13 +12,14 @@ import RxSwift
 
 class APIClient {
     
-    static func getTransaction(txHash: String) -> Observable<[TransactionModel]> {
-        return request(APIRouter.getTransaction(txHash: txHash))
+    static func getTransaction(address: String) -> Observable<TransactionResponseModel> {
+        return request(APIRouter.getTransaction(address: address))
     }
     
     //-------------------------------------------------------------------------------------------------
     //MARK: - The request function to get results in an Observable
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
+
         //Create an RxSwift observable, which will be the one to call the request when subscribed to
         return Observable<T>.create { observer in
             //Trigger the HttpRequest using AlamoFire (AF)

@@ -33,10 +33,33 @@
                     <view key="view" contentMode="scaleToFill" id="d1f-fb-7S4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUf-wO-vRU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CLK-aR-v2P">
+                                <rect key="frame" x="0.0" y="264" width="375" height="354"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OUf-wO-vRU" firstAttribute="trailing" secondItem="gAQ-LW-rlq" secondAttribute="trailing" id="6ET-wC-E7T"/>
+                            <constraint firstItem="OUf-wO-vRU" firstAttribute="height" secondItem="d1f-fb-7S4" secondAttribute="height" multiplier="0.3" id="LB3-jY-Gfv"/>
+                            <constraint firstItem="OUf-wO-vRU" firstAttribute="top" secondItem="gAQ-LW-rlq" secondAttribute="top" id="S2k-9A-5S4"/>
+                            <constraint firstItem="OUf-wO-vRU" firstAttribute="leading" secondItem="gAQ-LW-rlq" secondAttribute="leading" id="abq-Yx-m1p"/>
+                            <constraint firstItem="CLK-aR-v2P" firstAttribute="leading" secondItem="gAQ-LW-rlq" secondAttribute="leading" id="duZ-9v-lKM"/>
+                            <constraint firstItem="CLK-aR-v2P" firstAttribute="bottom" secondItem="gAQ-LW-rlq" secondAttribute="bottom" id="gf1-I1-NNn"/>
+                            <constraint firstItem="CLK-aR-v2P" firstAttribute="trailing" secondItem="gAQ-LW-rlq" secondAttribute="trailing" id="iL1-Zv-x1k"/>
+                            <constraint firstItem="CLK-aR-v2P" firstAttribute="top" secondItem="OUf-wO-vRU" secondAttribute="bottom" id="uIi-P2-hra"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gAQ-LW-rlq"/>
                     </view>
                     <navigationItem key="navigationItem" id="MAX-tX-jJD"/>
+                    <connections>
+                        <outlet property="transactionTableView" destination="CLK-aR-v2P" id="Xef-cY-VKw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwL-wf-Iop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

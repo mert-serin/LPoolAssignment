@@ -7,14 +7,21 @@
 //
 
 import Foundation
+import RxSwift
+struct TransactionResponseModel:Codable{
+    let status:String
+    let message:String
+    let result:[TransactionModel]
+}
+
 struct TransactionModel: Codable {
     let from:String
     let to:String
-    let value:Double
-    let timestamp:String
+    let value:String
+    let timeStamp:String
     var date:Date?{
         get{
-            return Date(timeIntervalSince1970: Double(timestamp)!)
+            return Date(timeIntervalSince1970: Double(timeStamp)!)
         }
     }
 }

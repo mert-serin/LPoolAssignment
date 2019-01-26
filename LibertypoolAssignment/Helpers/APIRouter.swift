@@ -11,7 +11,7 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
-    case getTransaction(txHash: String)
+    case getTransaction(address: String)
     
     //MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
@@ -61,13 +61,16 @@ enum APIRouter: URLRequestConvertible {
     //This is the queries part, it's optional because an endpoint can be without parameters
     private var parameters: Parameters? {
         switch self {
-        case .getTransaction(let txHash):
+        case .getTransaction(let address):
             //A dictionary of the key (From the constants file) and its value is returned
             return [
-                Constants.Parameters.txHash : txHash,
-                Constants.Parameters.action : "action",
-                Constants.Parameters.module : "transaction",
+                Constants.Parameters.address : address,
+                Constants.Parameters.action : "txlist",
+                Constants.Parameters.module : "account",
                 Constants.Parameters.apiKey : Constants.APIKey,
+                Constants.Parameters.endBlock : 99999999,
+                Constants.Parameters.startBlock : 0,
+                Constants.Parameters.sort : "asc"
             ]
         }
     }

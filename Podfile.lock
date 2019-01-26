@@ -3,9 +3,14 @@ PODS:
   - Charts (3.2.1):
     - Charts/Core (= 3.2.1)
   - Charts/Core (3.2.1)
+  - Differentiator (3.1.0)
   - Marshal (1.2.7)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
@@ -16,15 +21,18 @@ DEPENDENCIES:
   - Charts
   - Marshal
   - RxCocoa (~> 4.0)
+  - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
+    - Differentiator
     - Marshal
     - RxAtomic
     - RxCocoa
+    - RxDataSources
     - RxSwift
     - SwiftKeychainWrapper
 
@@ -41,12 +49,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
   Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Marshal: ef480864a6af10a63f67be7e55bb5d8fe67a16d9
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 7390d5b3092d8e8ab7176144a30cf565b8e70742
+PODFILE CHECKSUM: 69e591320d9371699547e5c46ff6527ced94f32e
 
 COCOAPODS: 1.5.3

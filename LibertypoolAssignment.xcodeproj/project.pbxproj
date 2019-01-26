@@ -16,6 +16,9 @@
 		6126501521FA66A200F5B580 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501421FA66A200F5B580 /* APIRouter.swift */; };
 		6126501821FA67E100F5B580 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501721FA67E100F5B580 /* TransactionModel.swift */; };
 		6126501A21FA686600F5B580 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126501921FA686600F5B580 /* APIClient.swift */; };
+		6126504B21FBB6E800F5B580 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126504A21FBB6E800F5B580 /* TransactionListCell.swift */; };
+		6126504D21FBBED400F5B580 /* TransactionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6126504C21FBBED400F5B580 /* TransactionListCell.xib */; };
+		6126505021FBDAF000F5B580 /* CustomSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126504F21FBDAF000F5B580 /* CustomSectionModel.swift */; };
 		6160247D21F918B400EB02CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160247C21F918B400EB02CD /* AppDelegate.swift */; };
 		6160248221F918B400EB02CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6160248021F918B400EB02CD /* Main.storyboard */; };
 		6160248421F918B500EB02CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6160248321F918B500EB02CD /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 		6126501421FA66A200F5B580 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		6126501721FA67E100F5B580 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		6126501921FA686600F5B580 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		6126504A21FBB6E800F5B580 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
+		6126504C21FBBED400F5B580 /* TransactionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListCell.xib; sourceTree = "<group>"; };
+		6126504F21FBDAF000F5B580 /* CustomSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionModel.swift; sourceTree = "<group>"; };
 		6160247921F918B400EB02CD /* LibertypoolAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibertypoolAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6160247C21F918B400EB02CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6160248121F918B400EB02CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		61264FF021F9207100F5B580 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6126504E21FBDADF00F5B580 /* View Models */,
 				6126501621FA67D600F5B580 /* Response Models */,
 				6126500121F922F800F5B580 /* Manager Models */,
 			);
@@ -110,13 +117,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61264FF221F9208000F5B580 /* Views */ = {
+		61264FF221F9208000F5B580 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				6160248521F918B500EB02CD /* LaunchScreen.storyboard */,
 				6160248021F918B400EB02CD /* Main.storyboard */,
 			);
-			path = Views;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		61264FF521F920D300F5B580 /* Generic */ = {
@@ -166,6 +173,31 @@
 			path = "Response Models";
 			sourceTree = "<group>";
 		};
+		6126504821FBB6CA00F5B580 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6126504921FBB6D200F5B580 /* Cell Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6126504921FBB6D200F5B580 /* Cell Views */ = {
+			isa = PBXGroup;
+			children = (
+				6126504A21FBB6E800F5B580 /* TransactionListCell.swift */,
+				6126504C21FBBED400F5B580 /* TransactionListCell.xib */,
+			);
+			path = "Cell Views";
+			sourceTree = "<group>";
+		};
+		6126504E21FBDADF00F5B580 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				6126504F21FBDAF000F5B580 /* CustomSectionModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		6160247021F918B400EB02CD = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +219,9 @@
 		6160247B21F918B400EB02CD /* LibertypoolAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				6126504821FBB6CA00F5B580 /* Views */,
 				61264FFA21F921FA00F5B580 /* Protocols */,
-				61264FF221F9208000F5B580 /* Views */,
+				61264FF221F9208000F5B580 /* Storyboards */,
 				61264FF121F9207900F5B580 /* Supporting Files */,
 				61264FF021F9207100F5B580 /* Models */,
 				61264FEF21F9206A00F5B580 /* Helpers */,
@@ -278,6 +311,7 @@
 			files = (
 				6160248721F918B500EB02CD /* LaunchScreen.storyboard in Resources */,
 				6160248421F918B500EB02CD /* Assets.xcassets in Resources */,
+				6126504D21FBBED400F5B580 /* TransactionListCell.xib in Resources */,
 				6160248221F918B400EB02CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,9 +352,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LibertypoolAssignment/Pods-LibertypoolAssignment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
@@ -330,9 +366,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
@@ -348,7 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6126505021FBDAF000F5B580 /* CustomSectionModel.swift in Sources */,
 				61264FF421F920C600F5B580 /* TransactionTabBarController.swift in Sources */,
+				6126504B21FBB6E800F5B580 /* TransactionListCell.swift in Sources */,
 				6160247D21F918B400EB02CD /* AppDelegate.swift in Sources */,
 				6126501821FA67E100F5B580 /* TransactionModel.swift in Sources */,
 				6126501A21FA686600F5B580 /* APIClient.swift in Sources */,
