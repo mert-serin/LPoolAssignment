@@ -21,8 +21,9 @@ class TransactionViewController: BaseViewController {
     let dataSource = RxTableViewSectionedReloadDataSource<CustomSectionModel>(
         configureCell: { (temp, tv, indexPath, element) in
             let cell = tv.dequeueReusableCell(withIdentifier: "TransactionListCell") as! TransactionListCell
-            cell.backgroundColor = .red
+            cell.backgroundColor = UIColor.getColor(240, 240, 240)
             cell.viewModel = temp[indexPath.section].items[indexPath.row]
+            print(element)
             return cell
     },
         titleForHeaderInSection: { dataSource, sectionIndex in
@@ -41,9 +42,10 @@ class TransactionViewController: BaseViewController {
                 .disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
         
-
+        transactionTableView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
         
-//        transactions.bind(to: .disposed(by: disposeBag)
     }
 
     private func changeModels(items:[TransactionModel]) -> Observable<[CustomSectionModel]>{
@@ -68,5 +70,15 @@ class TransactionViewController: BaseViewController {
         }
         
         return Observable.just(sectionArray)
+    }
+}
+
+extension TransactionViewController:UITableViewDelegate{
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view:TransactionHeaderCell = TransactionHeaderCell.fromNib()
+        if !dataSource.sectionModels.isEmpty{
+            view.headerTitleLabel.text = dataSource[section].header
+        }
+        return view
     }
 }

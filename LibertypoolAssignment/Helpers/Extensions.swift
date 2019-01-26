@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension Date {
     func isInSameWeek(date: Date) -> Bool {
         return Calendar.current.isDate(self, equalTo: date, toGranularity: .weekOfYear)
@@ -39,5 +39,18 @@ extension Date {
         dateFormatter.dateFormat = dateFormat
         dateFormatter.locale = Locale(identifier: "en_US")
         return dateFormatter.string(from: self)
+    }
+}
+
+extension UIView {
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
+}
+
+extension UIColor{
+    static func getColor(_ r:CGFloat, _ g:CGFloat, _ b:CGFloat) -> UIColor{
+        let c = CGFloat(255.0)
+        return UIColor(red: r/c, green: g/c, blue: b/c, alpha: 1.0)
     }
 }
