@@ -14,3 +14,8 @@ enum ApiError: Error {
     case conflict               //Status code 409
     case internalServerError    //Status code 500
 }
+
+enum TransferDirection{
+    case In
+    case Out
+}

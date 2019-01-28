@@ -24,4 +24,12 @@ struct TransactionModel: Codable {
             return Date(timeIntervalSince1970: Double(timeStamp)!)
         }
     }
+    var direction:Bool{
+        get{
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
+                return to == appDelegate.wallet.value.walletAddress
+            }
+            return false
+        }
+    }
 }
