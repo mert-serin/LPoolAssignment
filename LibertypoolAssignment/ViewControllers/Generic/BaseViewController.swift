@@ -7,15 +7,9 @@
 //
 
 import UIKit
-
+import RxSwift
 class BaseViewController: UIViewController {
-    
-//    var user:LoginResponseModel?{
-//        get{
-//            return (UIApplication.shared.delegate as! AppDelegate).user
-//        }
-//    }
-//
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

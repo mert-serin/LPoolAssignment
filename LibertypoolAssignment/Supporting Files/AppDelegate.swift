@@ -7,15 +7,23 @@
 //
 
 import UIKit
-
+import RxSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var wallet: Variable<UserModel>!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if KeychainManager().getUser() == nil{
+            let walletSavedModel = UserModel(walletName: "My Wallet", walletAddress: "0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a")
+            KeychainManager().saveUser(model: walletSavedModel)
+            self.wallet = Variable.init(walletSavedModel)
+        }else{
+            wallet = Variable.init(KeychainManager().getUser()!)
+        }
+        
         return true
     }
 

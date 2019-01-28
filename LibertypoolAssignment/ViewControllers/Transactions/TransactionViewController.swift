@@ -10,12 +10,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import Charts
 
-class TransactionViewController: BaseViewController {
+class TransactionViewController: UIViewController {
     
+    var wallet:Variable<UserModel>!{
+        get{
+            return (UIApplication.shared.delegate as! AppDelegate).wallet
+        }set{
+            
+        }
+    }
+    
+    @IBOutlet weak var chartsView: LineChartView!
     @IBOutlet weak var transactionTableView: UITableView!
-    //Dispose bag
-
+    //MARK: Dispose bag
     private let disposeBag = DisposeBag()
     
     let dataSource = RxTableViewSectionedReloadDataSource<CustomSectionModel>(
@@ -30,6 +39,9 @@ class TransactionViewController: BaseViewController {
             return dataSource[sectionIndex].header
         }
     )
+    
+    var isBinded = false
+    var sectionModel:BehaviorSubject<[CustomSectionModel]>! = BehaviorSubject.init(value: [CustomSectionModel(items: [], header: "")])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,18 +49,19 @@ class TransactionViewController: BaseViewController {
         transactionTableView.register(UINib(nibName: "TransactionListCell", bundle: nil), forCellReuseIdentifier: "TransactionListCell")
         transactionTableView.rowHeight = 140
         transactionTableView.separatorColor = .clear
-        APIClient.getTransaction(address: "0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a").observeOn(MainScheduler.instance).subscribe(onNext: { (model) in
-            self.changeModels(items: model.result).bind(to: self.transactionTableView.rx.items(dataSource: self.dataSource))
-                .disposed(by: self.disposeBag)
-        }).disposed(by: disposeBag)
         
-        transactionTableView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
+        wallet.asObservable().subscribe(onNext: { (wallet) in
+            APIClient.getTransaction(address: wallet.walletAddress).observeOn(MainScheduler.instance).subscribe(onNext: { (model) in
+                let model = self.changeModels(items: model.result)
+                BehaviorSubject.init(value: model).bind(to: self.sectionModel).disposed(by: self.disposeBag)
+            }).disposed(by: self.disposeBag)
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
         
+        
+        sectionModel.bind(to: self.transactionTableView.rx.items(dataSource: self.dataSource)).disposed(by: self.disposeBag)
     }
 
-    private func changeModels(items:[TransactionModel]) -> Observable<[CustomSectionModel]>{
+    private func changeModels(items:[TransactionModel]) -> [CustomSectionModel]{
         
         var sectionArray = [CustomSectionModel]()
         var lastAddedItem:TransactionModel?
@@ -69,16 +82,23 @@ class TransactionViewController: BaseViewController {
             lastAddedItem = item
         }
         
-        return Observable.just(sectionArray)
+        return sectionArray
     }
 }
 
 extension TransactionViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view:TransactionHeaderCell = TransactionHeaderCell.fromNib()
         if !dataSource.sectionModels.isEmpty{
+            let view:TransactionHeaderCell = TransactionHeaderCell.fromNib()
             view.headerTitleLabel.text = dataSource[section].header
+            return view
         }
-        return view
+        return nil
+    }
+}
+
+extension TransactionViewController:TransactionViewControllerDelegate{
+    func refresh() {
+
     }
 }
